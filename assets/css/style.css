@@ -145,17 +145,6 @@ section{
   text-align: center;
 }
 
-.intro h2{
-  font-size: 55px;
-  color:#024e76;
-  margin-bottom: 35px;
-  padding: 0 100px 20px 100px;
-  border-bottom: 3px solid;
-  border-color: #fce138;
-  /*naturally the h2 element is a block elemet so it will fill up the parent therefore we need to make it inline, by using inline block instead of inline we can have it as an inline element but allow properties like padding to affect it as well like it would a block element*/
-  display: inline-block;
-}
-
 .intro p{
   line-height: 1.7;
   color: #39a6b2;
@@ -163,4 +152,52 @@ section{
   font-size: 20px;
   /*by adding the 80% width it pushed the text to the left side, therefore we can use t trick of margin 0 auto to center the block element with a width less than 100 auto tells browser to calc margin for us only horizontally tho*/
   margin: 0 auto;
+}
+
+.steps{
+  text-align: center;
+  background: #fce138;
+}
+
+ /*naturally the h2 element is a block elemet so it will fill up the parent therefore we need to make it inline, by using inline block instead of inline we can have it as an inline element but allow properties like padding to affect it as well like it would a block element*/
+
+ .section-title{
+   font-size: 55px;
+   color: #024e76;
+   margin-bottom: 35px;
+   padding: 0 100px 20px 100px;
+   display: inline-block;
+   border-bottom: 3px solid;
+ }
+ 
+ .primary-border {
+   border-color: #fce138;
+ }
+ 
+ .secondary-border {
+   border-color: #39a6b2;
+ }
+ 
+.steps div{
+  margin-bottom: 80px;
+}
+
+.steps img{
+  width: 15px;
+  margin: 10px 0;
+}
+
+.steps h3{
+  color: #024e76;
+  font-size: 46px;
+  margin-top: 10px;
+}
+
+.steps p{
+  color: #39a6b2;
+  font-size: 23px;
+}
+
+.steps span{
+  font-size: 38px;
 }
