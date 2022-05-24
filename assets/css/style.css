@@ -89,6 +89,8 @@ section{
 }
 
 /* Hero Style Start */
+
+/* Homepage hero*/
 .hero {
   background-image: url("../images/hero-bg.jpg");
   height: 600px;
@@ -96,6 +98,7 @@ section{
   background-position: center;
   position: relative;
 }
+
 
 .hero-form {
   background-color: #fce138;
@@ -288,3 +291,16 @@ section{
 }
 
 /*Reach out style ends*/
+
+.page-title{
+  color: #fce138;
+  border-bottom: 4px solid #fce138;
+  padding: 0 80px 15px 80px;
+  font-weight:normal;
+  font-size:42px;
+  font-style: italic;
+}
+
+.page-title h2{
+  display:inline-block;
+}
