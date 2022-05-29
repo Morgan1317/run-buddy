@@ -163,9 +163,6 @@ section{
 /* Hero style end*/
 
 /* Styling what we sections*/
-.intro{
-  text-align: center;
-}
 
 .intro p{
   line-height: 1.7;
@@ -174,10 +171,10 @@ section{
   font-size: 20px;
   /*by adding the 80% width it pushed the text to the left side, therefore we can use t trick of margin 0 auto to center the block element with a width less than 100 auto tells browser to calc margin for us only horizontally tho*/
   margin: 0 auto;
+  text-align: center;
 }
 
 .steps{
-  text-align: center;
   background: #fce138;
 }
 
@@ -186,10 +183,11 @@ section{
  .section-title{
    font-size: 55px;
    color: #024e76;
-   margin-bottom: 35px;
-   padding: 0 100px 20px 100px;
-   display: inline-block;
    border-bottom: 3px solid;
+   padding-bottom: 20px;
+   text-align: center;
+   margin: 0 auto 35px auto;
+   width: 50%;
  }
  
  .primary-border {
@@ -224,7 +222,7 @@ section{
   font-size: 38px;
 }
 .trainers{
-  text-align: center;
+ 
 }
 .trainer {
   width:900px;
@@ -269,9 +267,12 @@ section{
   text-align: right;
 }
 
+.flex-row {
+  display: flex;
+}
+
 /* Reach out style here*/
 .contact{
-  text-align: center;
   background: #024e76;
 }
 
