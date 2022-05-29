@@ -22,14 +22,19 @@ header{
     text-decoration: none;
     color: #fce138;
   }
-/*removed float right*/
+/*removed float right, adjust the link style vw is view windo so size is relative to windows width*/
   header nav {
-
-      margin: 7px 0;
+      margin: 0 30px;
+      font-weight: lighter;
+      font-size: 1.55vw;
   }
-
-  header nav ul li {
-    display: inline;
+/*remove inline display - use flex*/
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
   }
 
   header nav ul li a {
