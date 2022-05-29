@@ -3,6 +3,11 @@
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
     /* more on this crazy alphanumerical value in a minute! hexadecimal number below*/
@@ -13,15 +18,15 @@ body {
 /* apply sytles to the header, added flex*/
 
 header{
-    padding: 20px 35 px;
+    padding: 20px 35px;
     background-color: var(--tertiary-color);
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* need to add webkit to allow this to work on safari as well */
-    position: -webkit-sticky;
     /* sticky position allows header to stay on page no matter what*/
     position: sticky;
+    /* need to add webkit to allow this to work on safari as well */
+    position: -webkit-sticky;
     top: 0;
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
@@ -29,22 +34,25 @@ header{
     background-attachment: fixed;
     /* adding z-index to keep header as top element as a rule */
     z-index: 9999;
-
+}
+/*removed display inline*/
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 0;
+  /* adding a shadow to the text */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
   
-  header a {
-    color: var(--primary-color);
-  }
-
   header a {
     text-decoration: none;
     color: var(--primary-color);
   }
+
 /*removed float right, adjust the link style vw is view windo so size is relative to windows width*/
   header nav {
-      margin: 0 30px;
-      font-weight: lighter;
-      font-size: 1.55vw;
+      margin: 7px 0;
   }
 /*remove inline display - use flex*/
   header nav ul {
@@ -58,24 +66,12 @@ header{
   header nav ul li a {
       padding: 10px 15px;
       font-weight: lighter;
-      font-size: 22px;
+      font-size: 1.55vw;
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
-/*removed display inline*/
-  header h1 {
-    font-weight: bold;
-    font-size: 36px;
-    color: var(--primary-color);
-    margin: 0;
-    /* adding a shadow to the text */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- 
-  }
 
-  * {
-      margin: 0;
-      padding: 0;
-  }
+
+
 
 footer {
   background: var(--primary-color); 
@@ -94,19 +90,12 @@ footer h2 {
 }
 /*removed float right*/
 footer div {
-  float: right; 
   line-height:  1.5;
   text-align: right;
 }
 
 footer a {
   color: var(--secondary-color);
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 section{
@@ -138,6 +127,8 @@ section{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   /* rounding the corners of the box */
   border-radius: 15px;
+  width:40%;
+  margin:3.5%;
 }
 
 .hero-form h3{
@@ -147,8 +138,36 @@ section{
 
 .hero-form p{
   margin: 5px 0 15px 0;
-  width: 40%;
+}
+.hero-form label {
+  margin: 0 5px;
+}
+
+.hero-form button {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.hero-form button:hover{
+  background-color: var (--tertiary-color);
+}
+.hero-cta {
+  width: 35%;
+  text-align: right;
   margin: 3.5%;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.2;
+
+}
+.hero-cta h2 {
+  font-size: italic;
+  font-size: 55px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .checkbox-wrapper input, .radio-wrapper input{
   opacity: 0;
@@ -169,7 +188,9 @@ section{
   top: -4px;
   left: -30px;
 }
-
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
 .radio-wrapper label::after {
   content: "";
   height: 20px;
@@ -179,7 +200,7 @@ section{
   position: absolute;
   left: -29px;
   top: -3px;
-  background-image: radial-gradient(circle, var(--secondary-color), var(--tertiary-color));
+  background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
 }
 
 .checkbox-wrapper label::after {
@@ -194,15 +215,14 @@ section{
   transform: rotate(-58deg);
 }
 
-.checkbox-wrapper input:checked +label, .radio-wrapper input:checked + label{
-  font-weight: bold;
-}
 
-.checkbox-wrapper input +label::after, .radio-wrapper input + label::after {
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
   content: none;
 }
 
-.checkbox-wrapper input:checked +label::after, .radio-wrapper input + label::after {
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
   content: "";
 }
 
@@ -222,36 +242,7 @@ section{
   outline: none;
 }
 
-.hero-form label {
-  margin: 0 5px;
-}
 
-.hero-form button {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-}
-.hero-form button:hover{
-  background-color: var;
-}
-.hero-cta {
-  width: 35%;
-  text-align: right;
-  margin: 3.5%;
-  color: #fff;
-  font-size: 18px;
-  line-height: 1.2;
-
-}
-.hero-cta h2 {
-  font-size: italic;
-  font-size: 55px;
-  color: var(--primary-color);
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
 /* Hero style end*/
 
 /* Styling what we sections*/
